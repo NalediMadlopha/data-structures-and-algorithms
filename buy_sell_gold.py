@@ -1,7 +1,6 @@
 class API():
 
     def __init__(self):
-        # self.dic = [100, 180, 260, 310, 40, 535, 695]
         self.dic = [1, 5, 7, 10, 20, 17, 15, 11]
 
     def get_num_days(self):
@@ -58,11 +57,11 @@ class Solution():
         while day < self.number_of_days and day != (self.number_of_days - 1):
             if self.prices[day] > self.prices[day + 1] and abs(self.prices[day] - self.prices[day + 1]) > profit:
                 sell_day = day
-                profit = abs(self.prices[day] - self.prices[day + 1])
             day += 1
 
         return sell_day
 
-sol = Solution()
-sol.get_buy_day()
-sol.get_sell_day()
+
+solution = Solution()
+print(solution.get_buy_day())
+print(solution.get_sell_day())
